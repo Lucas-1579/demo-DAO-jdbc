@@ -24,6 +24,14 @@ public class Program2 {
 		Department newDep = new Department(null, "Music");
 		depDao.insert(newDep);
 		System.out.println("Inserted! new id = " + newDep.getId());
+		
+		
+		System.out.println("\n=== TEST 4: department update ====");
+		department = depDao.findById(1);
+		department.setName("Marketing");
+		depDao.update(department);
+		System.out.println("Update Complete!");
+		
 	}
 
 }
